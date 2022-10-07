@@ -1,0 +1,113 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #24242b !important;
+    color: white;
+}
+
+.text-secondary {
+    color: #a2a2a2;
+}
+.nav-bg{
+    background-color: #515150;
+    border-radius: 0px 0px 3px 3px ;
+  }
+  nav{
+    z-index: 99;
+  }
+  a{
+      text-decoration: none;
+      color: white;
+  }
+  a.activenav{
+    background-color: #24242b;
+    padding: 6% 40% ;
+    color: white;
+    width: 25%;
+  }
+  .nav-bg li{
+      height: 40px;
+      width: 25%;
+  }
+  .fands{
+    background: linear-gradient(0deg,rgb(34, 34, 34) -17%
+    ,rgb(138, 137, 137) 114%);
+  }
+  .cat p{
+    background-color: rgb(76, 73, 73);
+ }
+ .cat .active{
+  background-color: #e16e31 ;
+  color: black;
+ }
+ .modal-content{
+  background-color: #24242b !important;
+  top: 14vh;
+  position: absolute;
+}
+.dropdown-menu{
+transform: none !important;
+background-color: #24242b !important;
+color: white;
+border-radius:none;
+border: none;
+
+}
+.dropdown-menu .dropdown-item{
+color: white;
+}
+ .info li:nth-child(odd){
+       
+    background-color: #515150;
+  }
+  .info li:nth-child(even){
+    background-color: #24242b;
+  }
+  .hover1:hover{
+    background-color: #cda817 !important;
+  }
+  .nav-bg + .container{
+      padding-top: 13px;
+  }
+  .tra>.active{
+    background-color:#e16e31;
+            }
+            .text-secondary{
+              color: #a2a2a2;
+          }
+          .proced a{
+              text-decoration: none;
+          }
+          select:focus,input[type=Email]:focus,input[type=Text]:focus,input[type=number]:focus,input[type=date]:focus{
+              outline: none;
+          }
+          /*  */
+            ::placeholder{
+              font-size: 15px;
+            }
+            /* verify otp  */
+            .input input[type= number]
+            {
+              width: 40px;
+              height: 41px;
+              border-radius: 2px;
+              padding: 10px;
+              font-size: 20px;
+              font-weight: 600;
+              margin: 10px;
+              
+          }
+          .tags p{
+              
+              
+              background-color: #515150;
+              
+              font-size: 14px;
+              }
+          .input input[type= number]:focus{
+              background-color: #ffc107;
+              outline:none;
+          }

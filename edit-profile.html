@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Edit Profile | NijoPlus </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="vL1TH5Xqs2wAhCSk61EB7zpVZEfNxX3Y69tPzYBv">
+    <meta name="keywords" content="Edit Profile">
+    <meta name="description" content="Edit Profile">
+    <meta name="author" content="NijoPlus" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+        input {
+            background-color: rgba(240, 248, 255, 0);
+            outline: none;
+            border: 1px solid white;
+
+        }
+
+        .lis label {
+            width: 100%;
+            margin: 10px 0px;
+        }
+
+        .catg .tags {
+            margin: 3px;
+        }
+
+        .tags .checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+
+
+        .checkmark {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 1.9em;
+            width: fit-content;
+            text-align: center;
+            color: white;
+            padding: 0px 4px;
+            line-height: 1.9em;
+            background-color: #515150;
+            border-radius: 5px;
+            transition: 0.15s;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .tags input:checked~.checkmark {
+            background-color: #ffc107;
+            border-radius: 5px;
+            transition: 0.15s;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .tags input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .tags .checkmark:after {
+            left: 0.45em;
+            top: 0.25em;
+            width: 0.25em;
+            height: 0.5em;
+
+            transform: rotate(45deg);
+        }
+        .bg-warning{
+            background-color: rgba(255,113,0,255)!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container px-4 position-relative">
+
+        <p class=" fs-4 m-0 mb-4 text-warning pb-1" style="border-bottom:1px solid #a2a2a2 ; width: fit-content;">
+            Edit Profile
+        </p>
+
+        <form class="login-box" action="" method="POST" role="form"
+            autocomplete="off">
+            <div class=" my-2 " style="height:56px;">
+                <div class="  border align-items-center p-1 rounded input-group">
+                    Name:
+                    <input type="text" class="bg-transparent text-white  border-0 mx-1 " placeholder="Name" name="name"
+                        value="himanshu" maxlength="255">
+
+                </div>
+                <!-- <span class="error-message text-danger"> </span> -->
+            </div>
+
+            <div class=" my-2" style="height: 56px;">
+                <div class="  border align-items-center p-1 rounded input-group">
+                    Mobile Number:
+                    9121208121
+                </div>
+            </div>
+
+            <div class=" my-2" style="height: 56px;">
+                <div class="  border align-items-center p-1 rounded input-group">
+                    Email:
+                    tamh142@gmail.com
+                </div>
+            </div>
+            <div class=" my-2" style="height: 56px;">
+                <div class=" justify-content-between  align-items-center  align-items-center p-1 rounded input-group">
+                    Gender:
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+
+                </div>
+                <span class="error-message text-danger"> </span>
+            </div>
+            <div class=" my-2" style="height: 56px;">
+                <div class=" justify-content-between  align-items-center p-1 input-group">
+                    Listener Type:
+                    <input type="radio" name="type" value="general"> General
+                    <input type="radio" name="type" value="counsellor"> Counsellor
+
+                </div>
+                <span class="error-message text-danger"> </span>
+            </div>
+            <div class=" my-2" style="height: 180px;">
+                <div class="   align-items-center p-1 input-group">
+                    <div>
+                        <div>
+                            Intro:
+                        </div>
+
+                        <textarea name="intro " rows="5" cols="50" class="bg-dark text-white w-100"></textarea>
+                    </div>
+
+
+                </div>
+                <span class="error-message text-danger"> </span>
+            </div>
+
+            <div class=" my-2" style="height: 56px;">
+                <div class="justify-content-between  align-items-center p-1 input-group">
+                    Price per minute:
+                    <input type="text" class="bg-transparent w-50 border-0 text-white   " placeholder="Price"
+                        name="price" value="" maxlength="3">
+
+                </div>
+                <span class="error-message text-danger"> </span>
+            </div>
+            <div class="my-3">
+                <p class=" m-0  ">Catgeory </p>
+                <!-- clickable bnana hai -->
+                <div class='text-white catg d-flex flex-wrap'>
+                    <label class="tags">
+                        <input class="checkbox" type="checkbox">
+                        <div class="checkmark">Workplacep </div>
+                    </label>
+                    <label class="tags">
+                        <input class="checkbox" type="checkbox">
+                        <div class="checkmark">Relationship problem </div>
+                    </label>
+                    <label class="tags">
+                        <input class="checkbox" type="checkbox">
+                        <div class="checkmark">Finnacial Crisis </div>
+                    </label>
+                    <label class="tags">
+                        <input class="checkbox" type="checkbox">
+                        <div class="checkmark">Confusion </div>
+                    </label>
+                    <label class="tags">
+                        <input class="checkbox" type="checkbox">
+                        <div class="checkmark">Carrer Pressure </div>
+                    </label>
+                    <label class="tags">
+                        <input class="checkbox" type="checkbox">
+                        <div class="checkmark">Friendship Problems </div>
+                    </label>
+                    <label class="tags">
+                        <input class="checkbox" type="checkbox">
+                        <div class="checkmark">Health Crisis</div>
+                    </label>
+
+                </div>
+
+
+                <span class="error-message text-danger">  </span>
+            </div>
+            <!-- your code is commented procced your code with above code -->
+            <!-- <div class=" justify-content-around my-2 align-items-center p-3 input-group"
+                style=" border-bottom:1px solid #a2a2a2 ;">
+                Category:
+                <select name="category[]" multiple="">
+                    <option value="1">depression</option>
+                    <option value="2">career pressure</option>
+                    <option value="3">health crisis</option>
+                </select>
+                <span class="error-message"></span>
+            </div> -->
+
+            <div class=" text-center proced rounded my-4">
+                <div id="ajax-loader" style="display:none"></div>
+                <div class="alert alert-info" role="alert" id="ajaxRes" style="display:none;"></div>
+                <button type="submit" class="btn  w-100 bg-warning">Update</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+ 
+
+</body>
+
+</html>

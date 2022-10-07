@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+    <style>
+        
+
+        .button-cover,
+        .knobs,
+        .layer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .button {
+            position: relative;
+            top: 50%;
+            width: 65px;
+            height: 30px;
+            margin: 7px auto 0 auto;
+            overflow: hidden;
+        }
+
+       .button.r,
+        .button.r .layer {
+            border-radius: 100px;
+        }
+
+        .button.b2 {
+            border-radius: 2px;
+        }
+
+        .checkbox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .knobs {
+            z-index: 2;
+        }
+
+        .layer {
+            width: 100%;
+            background-color: #515150;
+            transition: 0.3s ease all;
+            z-index: 1;
+        }
+
+        /* Button 1 */
+        #button-1 .knobs:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            width: 19px;
+            /* height: 15px; */
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1px;
+            padding: 13px 2px;
+            background-color:  rgb(27, 225, 27);;
+            border-radius: 50%;
+            transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+        }
+
+        #button-1 .checkbox:checked+.knobs:before {
+            content: '';
+
+            left: 42px;
+            background-color: #84807f;
+        }
+
+        #button-1 .checkbox:checked~.layer {
+            background-color: #b3b0b0;
+        }
+
+        #button-1 .knobs,
+        #button-1 .knobs:before,
+        #button-1 .layer {
+            transition: 0.3s ease all;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container p-0  nav-bg shadow sticky-top ">
+        <ul class=' p-0 text-center m-0 row fs-3 ' style="list-style: none; ">
+            <li class='col p-0 '>
+                <a  href="./home.html"><i class="bi bi-house-door-fill"></i></a>
+            </li>
+            <li class='col p-0'>
+                <a href="./wallet.html"><i class="bi bi-wallet2"></i></a>
+            </li>
+            <li class='col p-0'>
+                <a class="activenav" href="./profile.html"><i class="bi bi-person-fill"></i></a>
+            </li>
+
+        </ul>
+
+    </nav>
+    <div class="container  ">
+        <div class="d-flex justify-content-between">
+            <p class=" fs-3 m-0">
+                <a href="./edit-profile.html">
+                <i class="bi bi-pencil-square"></i></a>
+                
+            </p>
+            <p class="fs-3 fw-bold text-center">Profile </p>
+            <p class=" rounded-pill fs-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-power text-danger"></i></p>
+        </div>
+        <div class="rounded-circle text-center m-auto position-relative" style="border:8px solid #515150 ; height: 216px; width: 217px; ">
+            <img src="./img/index.jpg" class="rounded-circle" alt="" style="    height: 200px;
+width: 200px;">
+<div class="position-absolute bg-warning px-3 py-2 rounded-pill bottom-0 end-0">
+<p class="m-0 fs-3"   ><i class="bi bi-camera"></i></p>
+</div>
+        </div>
+    </div>
+    <!-- online oflline status -->
+
+    <div class="button r " id="button-1">
+        <input type="checkbox" class="checkbox">
+        <div class="knobs"></div>
+        <div class="layer"></div>
+    </div>
+    <div class='text-center'>
+        <span><i class="bi text-warning bi-star-fill"></i></span>
+        <span><i class="bi text-warning  bi-star-fill"></i></span>
+        <span><i class="bi text-warning  bi-star-fill"></i></span>
+        <span><i class="bi bi-star-fill"></i></span>
+        <span><i class="bi bi-star-fill"></i></span>
+        <p class="text-warning">3.0 Stars</p>
+    </div>
+    <div class="container mt-5">
+        <div class="my-3" style="border-bottom:1px solid #515150 ;">
+            <p class="text-warning m-0">About</p>
+
+        </div>
+        <p class="text-secondary">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, odit. Voluptatibus maiores cumque
+            consequatur. Earum repellendus maxime iusto
+        </p>
+       
+        <div>
+            <div class="d-flex justify-content-between">
+                <p>Name:</p>
+                <p class="text-secondary">Varun</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p>Age:</p>
+                <p class="text-secondary">24</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p>Gender: </p>
+                <p class="text-secondary">M</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p>Email: </p>
+                <p class="text-secondary">yourname@gmail.com</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p>Adhar: </p>
+                <p class="text-secondary">xxxx4x181844</p>
+            </div>
+            
+        </div>
+        
+        <div class="my-3 " style="border-bottom:1px solid #515150 ;">
+            <p class="text-warning m-0">Categories</p>
+
+          
+        </div>
+        <div class="d-flex flex-wrap cat">
+            <p class=" m-0 m-1 px-2 rounded "> all</p>
+            <p class=" m-0 m-1 px-2 rounded "> Health Criis</p>
+            <p class=" m-0 m-1 px-2 rounded "> Financial Criis</p>
+            <p class=" m-0 m-1 px-2 rounded "> Confusion</p>
+            <p class=" m-0 m-1 px-2 rounded "> Workplace</p>
+            <p class=" m-0 m-1 px-2 rounded "> Friendship Problem</p>
+            <p class=" m-0 m-1 px-2 rounded "> Career Pressure</p>
+        </div>
+        <div class='text-white tags d-flex flex-wrap'>
+
+
+
+        </div>
+        <div class="" style="border-bottom:1px solid #515150 ;">
+            <p class="text-warning m-0">Price Per Minutes</p>
+           
+
+        </div>
+        N/A
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content w-75 m-auto" style="right: 13%; top:30vh;">
+                
+                <div class="modal-body dropdown">
+
+                   
+                    <div>
+                        <p class="text-center fw-bold">
+                            Do you Want to logout ?
+                        </p>
+                     
+                    </div>
+                </div>
+                <div class="modal-footer border-0 m-auto">
+                    
+                    <button type="button" class="btn border  border-warning">
+                       <a href="./signup.html" class="text-danger">Yes</a> </button>
+                    <button type="button" data-bs-dismiss="modal" class="btn border-warning text-white">No</button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+</html>

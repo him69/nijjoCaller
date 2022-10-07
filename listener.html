@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+    <style>
+        input {
+            background-color: rgba(240, 248, 255, 0);
+            outline: none;
+            border: 1px solid white;
+           
+        }
+        .lis label{
+            width: 100%;
+            margin: 10px 0px;
+        }
+        .catg .tags{
+            margin: 3px;
+        }
+        
+        .tags .checkbox {
+         position: absolute;
+         opacity: 0;
+         cursor: pointer;
+         height: 0;
+         width: 0;
+        }
+        
+        
+        
+        .checkmark {
+         position: relative;
+         top: 0;
+         left: 0;
+         height: 1.9em;
+         width: fit-content;
+         text-align:center;
+         color:white;
+         padding:0px 4px;
+         line-height:1.9em;
+         background-color: #515150;
+         border-radius: 5px;
+         transition: 0.15s;
+        }
+        
+        /* When the checkbox is checked, add a blue background */
+        .tags input:checked~ .checkmark {
+         background-color: #ffc107;
+         border-radius: 5px;
+         transition: 0.15s;
+        }
+        
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+         content: "";
+         position: absolute;
+         display: none;
+        }
+        
+        /* Show the checkmark when checked */
+        .tags input:checked~ .checkmark:after {
+         display: block;
+        }
+        
+        /* Style the checkmark/indicator */
+        .tags .checkmark:after {
+         left: 0.45em;
+         top: 0.25em;
+         width: 0.25em;
+         height: 0.5em;
+        
+         transform: rotate(45deg);
+        }
+            
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container fs-3">
+        <p onclick="history.back()"><i class="bi bi-caret-left"></i></p> 
+    </div> -->
+   
+    
+    <div class=" text-center my-3">
+        <p class="text-warning fs-3 fw-bold">Become a listner</p>
+        <!-- <p class="text-secondary">fill out this form and our team will be in </p> -->
+    </div>
+    <form action="
+    ">
+       <div class="w-75 m-auto ">
+        <div class="lis">
+            <label for="">
+                <p class="text-warning">Date of Birth</p>
+                <input type="date" class="w-100 text-white p-2 rounded" name="" id=""> 
+            </label>
+        </div>
+        <div class="lis">
+            <label for="">
+                <p class="text-warning">Name</p>
+                <input type="text" name=""class="w-100 p-2 rounded" placeholder="Enter your full Name" id="">
+            </label>
+        </div>
+        
+        <div class="lis">
+            <label for="">
+                <p class="text-warning">Email</p>
+                <input type="email" name="" class="w-100 p-2 rounded" placeholder="Enter your Email Address" id="">
+            </label>
+        </div>
+        <div class="lis">
+            <label for="">
+                <p class="text-warning">Phone Number</p>
+                <input type="number"class="w-100 p-2 rounded" name="" placeholder="Enter Your Number" id="">
+            </label>
+        </div>
+        <div class="lis">
+            <label for="">
+                <p class="text-warning">Adhar number</p>
+                <input type="number" class="w-100 p-2 rounded" name="" placeholder="Enter Your Adhar Number" id="">
+            </label>
+        </div>
+        <div class="lis">
+            <label for="">
+<p class="text-warning"> Type</p>
+                <input type="radio" id="male" name="fav_language" value="male">
+                  counseller
+    
+                  <input type="radio" id="female" name="fav_language" value="female">
+                  General
+            </label>
+        </div>
+        <div class="my-3">
+            <p class=" m-0  fs-4 text-warning">Catgeory Preference (Select at least 3)</p>
+            <!-- clickable bnana hai -->
+            <div class='text-white catg d-flex flex-wrap'>
+                <label class="tags">
+                    <input class="checkbox" type="checkbox" >
+                    <div class="checkmark">Workplacep </div>
+                  </label>
+                  <label class="tags">
+                    <input class="checkbox" type="checkbox" >
+                    <div class="checkmark">Relationship problem </div>
+                  </label>
+                  <label class="tags">
+                    <input class="checkbox" type="checkbox" >
+                    <div class="checkmark">Finnacial Crisis </div>
+                  </label>
+                  <label class="tags">
+                    <input class="checkbox" type="checkbox" >
+                    <div class="checkmark">Confusion </div>
+                  </label>
+                  <label class="tags">
+                    <input class="checkbox" type="checkbox" >
+                    <div class="checkmark">Carrer Pressure </div>
+                  </label>
+                  <label class="tags">
+                    <input class="checkbox" type="checkbox" >
+                    <div class="checkmark">Friendship Problems </div>
+                  </label>
+                  <label class="tags">
+                    <input class="checkbox" type="checkbox" >
+                    <div class="checkmark">Health Crisis</div>
+                  </label>
+                
+            </div>
+            <div>
+                <p class=" m-0  fs-4">Describe yourself</p>
+                <textarea type="textarea"class="bg-transparent rounded text-white w-100 border fs-4" placeholder="describe yourself in 100 words  "  style="height: 100px; font-size: 20px;  outline: none;"></textarea>
+            </div>
+            <div class="bg-warning text-center w-100 proced rounded mt-2" style="height: 53px;
+                line-height: 53px;">
+                <p class="fs-3  "> <a class=" text-dark" href="./home.html">Let's Go</a> </p>
+            </div>
+
+        </div>
+
+        
+       </div>
+       
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

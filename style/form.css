@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+        background-color: #24242b !important;
+        color: white;
+       }
+.text-secondary{
+    color: #a2a2a2;
+}
+.proced a{
+    text-decoration: none;
+}
+select:focus,input[type=Email]:focus,input[type=Text]:focus,input[type=number]:focus,input[type=date]:focus, input[type=password]:focus{
+    outline: none;
+}
+::placeholder {
+    font-size: 13px; 
+  }
+  
+  /* verify otp  */
+  .input input[type= number]
+  {
+    width: 40px;
+    height: 41px;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+    
+}
+.catg .tags {
+    margin: 3px;
+    }
+.input input[type= number]:focus{
+    background-color: #ffc107;
+    outline:none;
+}
